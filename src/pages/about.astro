@@ -1,0 +1,25 @@
+---
+import Card from '@components/Card.astro';
+import RootLayout from '@layouts/RootLayout.astro';
+
+---
+
+<RootLayout title='About' >
+    <section>
+        <h1 class="title">About page</h1>
+        <div class="content-card">
+            <Card title='Home' href='/' body="This is index page" />
+        </div>
+    </section>
+</RootLayout>
+
+<style>
+	.title {
+		text-align: center;
+	}
+	.content-card {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+</style>
