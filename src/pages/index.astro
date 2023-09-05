@@ -1,13 +1,18 @@
 ---
 import RootLayout from '@layouts/RootLayout.astro';
 import Card from '@components/Card.astro';
+import {PATHS_TEST} from '@utils/constants/Rutas';
+
 ---
 
 <RootLayout title="Bienvenido.">
 	<h1 class="title">Index Page</h1>
 	<div class="content-card">
-		<Card title='About' href='/about' body="This is about page" />
-        <Card title='Home' href='/' body="This is index page" />
+		{
+			PATHS_TEST.map(({title , body, href}, index) => (
+				<Card title={title} href={href} body={body} />
+			))
+		}
 	</div>
 </RootLayout>
 
