@@ -1,4 +1,4 @@
-export interface Ruta {
+export type Ruta = {
     title: string
     href: string
     body: string

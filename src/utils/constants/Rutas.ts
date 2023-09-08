@@ -1,14 +1,14 @@
-import type { Ruta } from "@utils/interfaces/Ruta";
+import type { Ruta } from "@utils/types/Ruta";
 
 export const PATHS_TEST: Ruta[] = [
     {
-        title: "Home",
+        title: "Inicio",
         href: "/",
-        body: "This is index page"
+        body: "Vuelve a ver más cosas al inicio."
     },
     {
-        title: "About",
+        title: "Sobre nosotros",
         href: "/about",
-        body: "This is about page"
+        body: "Aprende más sobre nosotros."
     }
 ]

@@ -1,6 +1,6 @@
 ---
 import Card from "@components/Card.astro";
-import { Ruta } from "@utils/interface/Ruta.ts";
+import { type Ruta } from "@utils/types/Ruta"
 
 interface Props {
     rutas: Ruta[];
@@ -25,9 +25,9 @@ const { rutas } = Astro.props;
 
 <style>
     .content-card {
-        @apply flex justify-center items-center;
+        @apply flex justify-center items-stretch;
     }
     .title {
-        @apply text-3xl font-semibold text-center tracking-tight leading-none mb-10;
+        @apply text-2xl md:text-3xl font-semibold text-center tracking-tight leading-none mb-10;
     }
 </style>
