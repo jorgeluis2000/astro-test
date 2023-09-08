@@ -1,5 +1,54 @@
+---
+import GitHub from '@components/icons/GitHub.astro'
+import Twitter from '@components/icons/Twitter.astro'
+import Discord from '@components/icons/Discord.astro'
+import Facebook from '@components/icons/Facebook.astro'
+---
 
+<footer class="footer">
+    <div class="content-footer">
+        <span class="all-rights-reserved">@ 2023 <a class="font-semibold hover:underline hover:underline-offset-4" href="/">My page</a>. Todos los derechos reservados.</span>
+        <div class="social-medials">
+            <a href="#" class="social-medial">
+                <GitHub />
+                <span class="sr-only">GitHub account</span>
+            </a>
 
-<footer>
-    <p>Este es mi footer</p>
+            <a href="#" class="social-medial">
+                <Twitter />
+                <span class="sr-only">Twitter page</span>
+            </a>
+
+            <a href="#" class="social-medial">
+                <Facebook />
+                <span class="sr-only">Facebook page</span>
+            </a>
+
+            <a href="#" class="social-medial">
+                <Discord />
+                <span class="sr-only">Discord commumity</span>
+            </a>
+        </div>
+    </div>
 </footer>
+
+<style>
+    .footer {
+        @apply py-10 px-6
+    }
+    .content-footer {
+        @apply mx-auto md:flex md:items-center md:justify-between
+    }
+
+    .all-rights-reserved {
+        @apply text-sm text-gray-500 sm:text-center
+    }
+
+    .social-medials {
+        @apply flex mt-4 space-x-5 justify-center md:mt-0
+    }
+
+    .social-medial {
+        @apply text-gray-400 hover:text-gray-900
+    }
+</style>

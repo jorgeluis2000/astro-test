@@ -1,5 +1,6 @@
 ---
 import Card from '@components/Card.astro';
+import Footer from '@components/Footer.astro';
 import RootLayout from '@layouts/RootLayout.astro';
 import {PATHS_TEST} from '@utils/constants/Rutas';
 ---
@@ -15,13 +16,13 @@ import {PATHS_TEST} from '@utils/constants/Rutas';
         </div>
 </RootLayout>
 
+<Footer />
+
 <style>
 	.title {
-		text-align: center;
+        @apply text-3xl my-5 text-center
 	}
 	.content-card {
-		display: flex;
-		justify-content: center;
-		align-items: center;
+        @apply flex justify-center items-center
 	}
 </style>

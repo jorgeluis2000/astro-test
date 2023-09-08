@@ -1,20 +1,25 @@
 ---
 import RootLayout from "@layouts/RootLayout.astro";
 
-const myNotFound = Astro.url.pathname
+const myNotFound = Astro.url.pathname;
 ---
 
 <RootLayout title="Not Found">
     <div class="container-not-found">
         <div>
             <h1 class="font-bold text-3xl mb-5">404 Not Found</h1>
-            <p class="text-sm">Lo sentimos esta pagina <span class="bg-gray-300 p-1 px-2 rounded-lg font-semibold text-justify">{myNotFound}</span> no existe en nuestras rutas.</p>
+            <p class="text-sm">
+                Lo sentimos esta pagina <span
+                    class="bg-gray-300 p-1 px-2 rounded-lg font-semibold text-justify"
+                    >{myNotFound}</span
+                > no existe en nuestras rutas.
+            </p>
         </div>
     </div>
 </RootLayout>
 
 <style>
     .container-not-found {
-        @apply flex justify-center items-center min-h-screen
+        @apply flex justify-center items-center min-h-screen;
     }
 </style>

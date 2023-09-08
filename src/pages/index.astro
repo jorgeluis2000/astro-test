@@ -1,28 +1,19 @@
 ---
-import RootLayout from '@layouts/RootLayout.astro';
-import Card from '@components/Card.astro';
-import {PATHS_TEST} from '@utils/constants/Rutas';
-
+import RootLayout from "@layouts/RootLayout.astro";
+import HeroSection from "@components/landing/HeroSection.astro";
+import RutasSection from "@components/landing/RutasSection.astro";
+import Footer from "@components/Footer.astro";
+import { PATHS_TEST } from "@utils/constants/Rutas";
 ---
 
-<RootLayout title="Bienvenido.">
-	<h1 class="title">Index Page</h1>
-	<div class="content-card">
-		{
-			PATHS_TEST.map(({title , body, href}, index) => (
-				<Card title={title} href={href} body={body} />
-			))
-		}
-	</div>
+<RootLayout title="Bienvenido">
+	<HeroSection title="Pagina principal" description="Este es una landing page desarrollada en astro, para testear el funcionamiento de la misma." />
+	<RutasSection rutas={PATHS_TEST} />
 </RootLayout>
+<Footer />
 
 <style>
 	.title {
-		text-align: center;
-	}
-	.content-card {
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		@apply text-3xl my-5 text-center;
 	}
 </style>
