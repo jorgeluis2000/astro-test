@@ -1,4 +1,6 @@
-export const PATHS_TEST = [
+import type { Ruta } from "@utils/interfaces/Ruta";
+
+export const PATHS_TEST: Ruta[] = [
     {
         title: "Home",
         href: "/",
