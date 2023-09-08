@@ -1,0 +1,33 @@
+---
+import Card from "@components/Card.astro";
+import { Ruta } from "@utils/interface/Ruta.ts";
+
+interface Props {
+    rutas: Ruta[];
+}
+
+const { rutas } = Astro.props;
+---
+
+<div class="bg-gray-900 text-white py-16 px-5">
+    <h1 class="title">Descubre más</h1>
+    
+    <div class="content-card">
+        {
+            rutas.map(({ title, body, href }) => (
+                <Card title={title} href={href} body={body} />
+            ))
+        }
+    </div>
+
+</div>
+
+
+<style>
+    .content-card {
+        @apply flex justify-center items-center;
+    }
+    .title {
+        @apply text-3xl font-semibold text-center tracking-tight leading-none mb-10;
+    }
+</style>
