@@ -1,28 +1,15 @@
 ---
-import Card from '@components/Card.astro';
-import Footer from '@components/Footer.astro';
-import RootLayout from '@layouts/RootLayout.astro';
-import {PATHS_TEST} from '@utils/constants/Rutas';
+import RutasSection from "@components/landing/RutasSection.astro";
+import Footer from "@components/Footer.astro";
+import RootLayout from "@layouts/RootLayout.astro";
+import { PATHS_TEST } from "@utils/constants/Rutas";
+import HeroSection from "@components/landing/HeroSection.astro";
 ---
 
-<RootLayout title='About' >
-        <h1 class="title">About page</h1>
-        <div class="content-card">
-            {
-                PATHS_TEST.map(({title , body, href}, index) => (
-                    <Card title={title} href={href} body={body} />
-                ))
-            }
-        </div>
+<RootLayout title="About">
+    <HeroSection title="Aprende más sobre nosotros" description="Esta es una sección donde encontraras información sobre a que nos dedicamos y entre otras cosas." />
+    <RutasSection rutas={PATHS_TEST} />
 </RootLayout>
 
 <Footer />
 
-<style>
-	.title {
-        @apply text-3xl my-5 text-center
-	}
-	.content-card {
-        @apply flex justify-center items-center
-	}
-</style>
