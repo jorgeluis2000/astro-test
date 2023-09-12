@@ -1,4 +1,5 @@
 ---
+import { YouTube } from '@astro-community/astro-embed-youtube';
 import RootLayout from "@layouts/RootLayout.astro";
 import HeroSection from "@components/landing/HeroSection.astro";
 import RutasSection from "@components/landing/RutasSection.astro";
@@ -7,8 +8,15 @@ import { PATHS_TEST } from "@utils/constants/Rutas";
 ---
 
 <RootLayout title="Bienvenido">
+	<YouTube 
+	id="xtTy5nKay_Y"
+	poster="https://images-assets.nasa.gov/image/0302063/0302063~orig.jpg"
+	params="start=10&end=30&controls=1&autoplay=1"
+	playlabel="Play the video"
+	color="#fff" />
 	<HeroSection title="Pagina principal" description="Este es una landing page desarrollada en astro, para testear el funcionamiento de la misma." />
 	<RutasSection rutas={PATHS_TEST} />
+	
 </RootLayout>
 <Footer />
 
