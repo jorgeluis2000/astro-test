@@ -3,6 +3,7 @@ import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
 
 const PORT_HOST = process.env.PORT_HOST ? Number(process.env.PORT_HOST) : 3000
+console.log("🚀 ~ file: astro.config.mjs:6 ~ process.env.PORT_HOST:", process.env.PORT_HOST)
 
 // https://astro.build/config
 export default defineConfig({
